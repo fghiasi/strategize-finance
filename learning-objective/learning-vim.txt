@@ -1,1 +1,120 @@
-# easy and get to go commands for developing on Vim
+# Easy and get to go commands for developing on Vim
+Modes :
+	
+	1- Command Mode -> esc
+		* :wq -> write & quit 
+		
+		* :18,30s/^/\/\// in c/c++ add comment line // in the begining (/^) of line. (\ is to clear definision of /)		* :18,20s/^/# ==>works well with yanking
+
+		* :s/a/b : replace a with b
+		* :s/a/b/g : replace all a with b in the line
+		* :18,37s/world/the_world/g : btween those lines replace a word as manytime as you find(/g)
+		* %s/a/b/g : replace a to b in entire file as many times as you find g
+
+		* open multiple files in buffer : vim file1 file2 file3 
+			* :bn -> buffer next
+			* :bp -> buffer previous 
+			* :b1 -> buffer 1 
+			* :b {file name} -> got to buffer of file containing that name
+			* :bd -> delete buffer
+
+
+		* :Explore -> file manager	=> q! to get out
+		* :vsplit -> vertical split
+		* :Sexplore
+		*	:split -> harizontal split 
+			* control + w + up/down/left/right: move around the windows
+
+		* :!{linux command} -> see linux command : example : :!df -h
+		* :.!{linux command}-> print the output of the command.  Example :.!ls print the commandline output
+Example:
+:.!ls
+	learning-vim.txt
+:.!ls -1
+.
+..
+learning-vim.txt
+.learning-vim.txt.swp
+
+	2- Insert Mode	-> i : insert
+		* o -> new line after
+		* O -> new line before
+		* a -> same as i 
+	3- Visual Mode	
+		* v -> visual mode
+		* V -> select a line
+
+		* v + it : select iner tag : <td>bluh bluh bluh </td>
+		* v + at : select outer tag
+
+		* v + shift + . -> shift selected lines to right
+		
+		* v + select + : + normal + A;
+Example:
+	cout << "abc"
+	cout << "def"
+======>resualt
+	cout << "abc";
+	cout << "def";
+
+
+		* v + select lines + : + sort 
+
+Example:
+
+		b
+		c
+		d
+		z
+		a
+
+
+		20
+		1
+		0
+		3
+=====> result 
+
+
+		0
+		1
+		20
+		3
+		a
+		b
+		c
+		d
+		z
+
+
+
+	4- Replace Mode
+		* r 
+
+	5- Normal Mode
+		* x -> delete forward. number{n} + x -> delete n chars forward.
+		* X -> delete backward. 
+
+		* u -> undo
+
+		* d -> delete a char
+		* dd -> delete a line / cut -> can use p to paste 
+		* number{n} + dd delete n lines after
+		*dw -> delete a word
+		
+		* J -> join lines
+
+		* number{n} + G : goto line  
+		* yy yank = copy a line
+		* yw : copy a word
+		* number{n} ++ yy 
+		* P -> paste before paragraph 
+		* p -> paste after paragraph
+
+		* $ -> end of line
+			* d$ -> delete until end of line
+		* ^ -> beginning of line
+		
+		* . -> copy what i wrote last time and paste
+
+		% -> go to end of {} () 
